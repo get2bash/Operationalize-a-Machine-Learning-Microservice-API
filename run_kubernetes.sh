@@ -4,13 +4,13 @@
 
 # Step 1:
 # This is your Docker ID/path
-dockerpath="get2bash/project4:v1.0.0"
+dockerpath="get2bash/project:v1.0.0"
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run project4 \
+kubectl run project \
     --image=get2bash/project4:v1.0.0 \
-    --port=80 --labels app=project4
+    --port=80 --labels app=project
 
 
 # Step 3:
@@ -19,5 +19,5 @@ kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward project4 8000:80
+kubectl port-forward project 8000:80
 

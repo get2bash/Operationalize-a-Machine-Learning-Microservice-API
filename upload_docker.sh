@@ -5,12 +5,12 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath="get2bash/project4:v1.0.0"
+dockerpath="get2bash/project:v1.0.0"
 
 # Step 2:  
 # Authenticate & tag
 docker login
-docker tag project4 $dockerpath
+docker tag project $dockerpath
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
