@@ -13,10 +13,11 @@
     5: activate the vartual environment = <ENVIRONMENT NAME>
     6: create = Makefile, Requirements.txt, Dockerfile and configure CircleCI
     
-- install packages in the requirements.txt = make install
-- install hadolint = sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 && sudo chmod +x /bin/hadolint
-- download minikube = curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-- install minikube = sudo install minikube-linux-amd64 /usr/local/bin/minikube
-- download kubectl = curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-- install kubectl = sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+    - Package installation
+    1: install packages in the requirements.txt = make install
+    2: install hadolint = sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 && sudo chmod +x /bin/hadolint
+    3: download minikube = curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    4: install minikube = sudo install minikube-linux-amd64 /usr/local/bin/minikube
+    5: download kubectl = curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    6: install kubectl = sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
