@@ -9,7 +9,7 @@ dockerpath="get2bash/project:v1.0.0"
 # Step 2
 # Run the Docker Hub container with kubernetes
 kubectl run project \
-    --image=get2bash/project4:v1.0.0 \
+    --image=get2bash/project:v1.0.0 \
     --port=80 --labels app=project
 
 
