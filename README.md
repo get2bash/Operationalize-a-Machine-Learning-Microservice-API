@@ -47,12 +47,12 @@
     4: Forward the container port to a host = kubectl port-forward <IMAGE NAME> 8000:80
     
     
-    ### Details and uses of the files
-    - Dockefile = contains code for creating and copying the app to a working directory, exposing the required port and starting the application
-    - Makefile = includes instructions on environment setup and lint tests
-    - requirement.txt = contains the required dependencies for running the app
-    - run_docker.sh = contains shell command for running a docker image
-    - upload_docker.sh = contains shell command to upload docker image to DockerHub
-    - run_kubernetes.sh = contains shell command to run Kubernetes cluster
-    - App.py = contains the application sofware code
-    - make_prediction.sh = contains shell command used in making prediction on the application
+### Details and uses of the files
+- Dockefile = contains code for creating and copying the app to a working directory, exposing the required port and starting the application
+- Makefile = includes instructions on environment setup and lint tests
+- requirement.txt = contains the required dependencies for running the app
+- run_docker.sh = contains shell command for running a docker image
+- upload_docker.sh = contains shell command to upload docker image to DockerHub
+- run_kubernetes.sh = contains shell command to run Kubernetes cluster
+- App.py = contains the application sofware code
+- make_prediction.sh = contains shell command used in making prediction on the application
