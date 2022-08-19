@@ -1,1 +1,15 @@
 <paste log output from Kubernetes-mediated prediction, here>
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+(udacity) ubuntu@ip-172-31-0-242:~/Operationalize-a-Machine-Learning-Microservice-API$ kubectl get pods
+NAME      READY   STATUS    RESTARTS   AGE
+project   1/1     Running   0          39s
+(udacity) ubuntu@ip-172-31-0-242:~/Operationalize-a-Machine-Learning-Microservice-API$ kubectl port-forward project 8000:80
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
