@@ -8,8 +8,6 @@
 
 
 
-
-
 - Environment creation and activation
 1: Creating a python3 vartual environment = `python3 -m venv ~/.<ENVIRONMENT NAME> `
 2: Activating the vertual environment = `source ~/.<ENVIRONMENT NAME>/bin/activate`
