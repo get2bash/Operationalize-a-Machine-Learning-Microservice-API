@@ -11,7 +11,7 @@
 
 
     - Environment creation and activation
-    1: Creating a python3 vartual environment = 'python3 -m venv ~/.<ENVIRONMENT NAME>'
+    1: Creating a python3 vartual environment = `python3 -m venv ~/.<ENVIRONMENT NAME>`
     2: Activating the vertual environment = 'source ~/.<ENVIRONMENT NAME>/bin/activate'
     3: Creating automated alias = nano ~/.bashrc ==>> 'alias <ENVIRONMENT NAME>="cd /home/ec2-user/environment/<FOLDER NAME> && source ~/.<ENVIRONMENT NAME>/bin/activate"'
     4: Activating the alias = 'source ~/.bashrc'
