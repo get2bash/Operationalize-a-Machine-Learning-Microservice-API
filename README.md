@@ -2,8 +2,6 @@
 
 # Operationalize a Machine Learning Microservice API
 
-
-## Final Project for Udacity Cloud DevOps Nanodegree!
 ### The goal of this project is to Operationalize a working, machine learning microservice using kubernetes, which is an open-source system for automating the management of containerized applications. Docker container was used to containarize the app and upladed to docker hub, which was later orchestrated by kubernetes cluster.
 
 
