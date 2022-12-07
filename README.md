@@ -7,33 +7,104 @@
 
 
 
+```bash
 
+```
 
 #### Environment creation and activation
-- Creating a python3 vartual environment = `python3 -m venv ~/.<ENVIRONMENT NAME> `
-- Activating the vertual environment = `source ~/.<ENVIRONMENT NAME>/bin/activate`
-- Creating automated alias = nano ~/.bashrc ==>> `alias <ENVIRONMENT NAME>="cd /home/ec2-user/environment/<FOLDER NAME> && source ~/.<ENVIRONMENT NAME>/bin/activate"`
-- Activating the alias = `source ~/.bashrc`
-- Activate the vartual environment = `<ENVIRONMENT NAME>`
+
+- Creating a python3 vartual environment
+```bash
+python3 -m venv ~/.<ENVIRONMENT NAME>
+```
+
+- Activating the vertual environment
+```bash
+source ~/.<ENVIRONMENT NAME>/bin/activate
+```
+
+- Creating automated alias
+```bash
+nano ~/.bashrc
+alias <ENVIRONMENT NAME>="cd /home/ec2-user/environment/<FOLDER NAME> && source ~/.<ENVIRONMENT NAME>/bin/activate"
+````
+
+- Activating the alias
+```bash
+source ~/.bashrc
+```
+- Activate the vartual environment
+```bash
+<ENVIRONMENT NAME>
+```
+
 - Create = Makefile, Requirements.txt, Dockerfile and configure CircleCI
 
 #### Package installation
-- Install docker on the instance = `sudo apt install podman-docker (Ubuntu)`
-- Install packages in the requirements.txt = `make install`
-- Install hadolint = `sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 && sudo chmod +x /bin/hadolint`
-- Download minikube = `curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64`
-- Install minikube = `sudo install minikube-linux-amd64 /usr/local/bin/minikube`
-- Download kubectl = `curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"`
-- Install kubectl = `sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl`
+- Install docker on the instance
+```bash
+sudo apt install podman-docker (Ubuntu)
+````
+
+- Install packages in the requirements.txt
+```bash
+make install
+```
+
+- Install hadolint
+```bash
+sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 && sudo chmod +x /bin/hadolint
+```
+
+- Download minikube
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+```
+
+- Install minikube
+```bash
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
+
+- Download kubectl
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+
+- Install kubectl
+```bashsudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
 
 
 #### Building and Pushing Docker image to DockerHub
-- Building image = `docker build --tag=<IMAGE NAME> .`
-- Checking if the image exist on local = `docker image ls`
-- Running the image and opening port = `docker run -p 8000:80 <IMAGE NAME>`
-- Assign path = `dockerpath="<DOCKER ID>/<IMAGE NAME>"`
-- Login = `docker login && docker tag <IMAGE NAME> $dockerpath`
-- Push from path = `docker push $dockerpath`
+- Building image
+```bashdocker build --tag=<IMAGE NAME> .
+```
+
+- Checking if the image exist on local
+```bash
+docker image ls
+```
+
+- Running the image and opening port
+```bash
+docker run -p 8000:80 <IMAGE NAME>
+```
+
+- Assign path
+```bash
+dockerpath="<DOCKER ID>/<IMAGE NAME>"
+```
+
+- Login
+```bash
+docker login && docker tag <IMAGE NAME> $dockerpath
+```
+
+- Push from path
+```bash
+docker push $dockerpath
+```
 
 #### Starting Minikube
 - Starting minikube to start a cluster
@@ -42,10 +113,25 @@ minkube start
 ```
 
 #### Running kubernetes 
-- Docker ID/path = `dockerpath="<DOCKER ID>/<IMAGE NAME>"`
-- Run the Docker Hub container with kubernetes = `kubectl run <IMAGE NAME> --image=<DOCKER ID>/<IMAGE NAME> --port=80 --labels app=<IMAGE NAME>`
-- List kubernetes pods = `kubectl get pods`
-- Forward the container port to a host = `kubectl port-forward <IMAGE NAME> 8000:80`
+- Docker ID/path
+```bash
+dockerpath="<DOCKER ID>/<IMAGE NAME>"
+```
+
+- Run the Docker Hub container with kubernetes
+```bash
+kubectl run <IMAGE NAME> --image=<DOCKER ID>/<IMAGE NAME> --port=80 --labels app=<IMAGE NAME>
+```
+
+- List kubernetes pods
+```bash
+kubectl get pods
+```
+
+- Forward the container port to a host
+```bash
+kubectl port-forward <IMAGE NAME> 8000:80
+```
 
     
 #### Details and uses of the files
