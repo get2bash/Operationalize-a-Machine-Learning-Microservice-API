@@ -36,7 +36,10 @@
 - Push from path = `docker push $dockerpath`
 
 #### Starting Minikube
-- Starting minikube to start a cluster = `minkube start`
+- Starting minikube to start a cluster
+```bash
+minkube start
+```
 
 #### Running kubernetes 
 - Docker ID/path = `dockerpath="<DOCKER ID>/<IMAGE NAME>"`
