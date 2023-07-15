@@ -2,14 +2,8 @@
 
 # Operationalize a Machine Learning Microservice API
 
-### The goal of this project is to Operationalize a working, machine learning microservice using kubernetes, which is an open-source system for automating the management of containerized applications. Docker container was used to containarize the app and upladed to docker hub, which was later orchestrated by kubernetes cluster.
+### The goal of this project is to Operationalize a working, machine-learning microservice using Kubernetes, which is an open-source system for automating the management of containerized applications. A Docker container was used to containerize the app and uploaded to the docker hub, which was later orchestrated by Kubernetes cluster.
 
-
-
-
-```bash
-
-```
 
 #### Environment creation and activation
 
@@ -72,13 +66,15 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 ```
 
 - Install kubectl
-```bashsudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```bash
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
 
 #### Building and Pushing Docker image to DockerHub
 - Building image
-```bashdocker build --tag=<IMAGE NAME> .
+```bash
+docker build --tag=<IMAGE NAME> .
 ```
 
 - Checking if the image exist on local
